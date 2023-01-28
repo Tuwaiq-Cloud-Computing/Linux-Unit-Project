@@ -9,5 +9,5 @@
 - Create a contact.
 - Update a contact.
 - Delete a contact.
-- View all the contact.
-- Search for contact.
+- View all the contacts.
+- Search for a contact.
