@@ -28,16 +28,57 @@ do
             useradd -e $exDate -c $Role $user
         fi 
 
-        echo "do you want to create folder for $user (y/n) ? "
-        read folderuser
+        echo 'user Successfully created, Now do you want to continue?(y/n)'
+        read ans3
 
-        if [[ $folderuser == "y" ]]
-        then
-            mkdir $user 
+        if [[ $ans3 == "y" ]]
+        then 
+            PS3='Please enter your choice: '
+            options=("Create Folder for $user" "Create Group for $user" "Add $user into group" "Quit")
+            select opt in "${options[@]}"
+            do
+                case $opt in
+                    "Create Folder for $user")
+                     echo " create folder for $user and make him the owner of folder"
+                      mkdir $user; chown $user $user
+                        ;;
+                    "Create Group for $user")
+                        echo "Create new group and add $user to the group"
+                        echo "please enter new group name:"
+                        read Ngroup
+                        groupadd $Ngroup
+                        usermod -a -G $Ngroup $user
+                        ;;
+                    "Add $user into group")
+                        echo "Add $user into group"
+                       echo "please enter group name "
+                        read GroupN
+                        if grep -q $GroupN /etc/passwd;
+                            then 
+                                usermod -a -G $GroupN $user
+                        else 
+                            echo "Group not exist"
+                        fi 
+                          
             
+                        ;;
+                    "Quit")
+                        break
+                        ;;
+                    *) echo "invalid option $REPLY";;
+                esac
+            done
         fi 
+       # echo "do you want to create folder for $user (y/n) ? "
+       # read folderuser
+
+       # if [[ $folderuser == "y" ]]
+       # then
+      #       
+            
+       # fi 
 
     fi 
 done
 
-echo "do you want add the users to group ?"
+#echo "do you want add the users to group ?"
