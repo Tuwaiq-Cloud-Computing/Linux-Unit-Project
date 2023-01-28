@@ -7,7 +7,7 @@
 
 #### As a system administrator I should be able to do the following :
 - Create a contact.
-- Update contact.
+- Update a contact.
 - Delete a contact.
 - View all the contact.
 - Search for contact.
