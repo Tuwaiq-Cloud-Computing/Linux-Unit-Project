@@ -1,26 +1,13 @@
 # Linux-Unit-Project
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
+## Quizing system using bash script
 
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+this bash script read from text file line by line to get questions for the quiz, the ; seperate the columns which represent the question 3 choices and the correct answer at the end of the line,
+
+the user has to type the answer from avilable answer. if the answer = save answer point will be added to the score
 
 
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
-
-
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+#Team Members:
+##Riyad Almalki
+##Ali Aljehani
