@@ -1,0 +1,2 @@
+User directories are created under?;tin;tmp;home;home
+In command mode, all keys on the keyboard become what command?;managing;editing;inserting;editing
