@@ -1,0 +1,79 @@
+#!/bin/bash
+
+          echo "Welcome to BashUserManagment Application"
+cond=0
+while [ $cond != 8 ];
+
+do
+          echo -e "Please enter a number 1-8:
+1 to create a user.
+2 to update user info.
+3 to delete user.
+4 to create a group.
+5 to add user to a group.
+6 to check user status.
+7 to check group status.
+
+8 to quit."
+          read choice
+          echo $choice
+
+if [ $choice -eq 1 ];
+then
+        echo "Please Enter the USERNAME ROLE EXPIREDATE"
+        read name role exp
+
+        echo "username: $name, ROLE: $role EXPDATE: $exp"
+        sudo useradd $name -c $role -e $exp
+
+elif [ $choice -eq 2 ];
+then
+        echo "Please Enter the USERNAME ROLE EXPIREDATE to update"
+        read name role exp
+
+        echo "username: $name, ROLE: $role EXPDATE: $exp"
+        sudo usermod $name -c $role -e $exp
+          
+
+elif [ $choice -eq 3 ];
+then
+          echo "Please Enter the USERNAME to delete"
+          read delete
+          sudo userdel -r $delete
+
+elif [ $choice -eq 4 ];
+then
+
+        echo "Please Enter the GroupName to be created"
+        read group
+
+        sudo goupadd $group
+ 
+elif [ $choice -eq 5 ];
+then
+
+        echo "Please Enter the GROUPNAME USERNAME to be added"
+        read group user
+
+        sudo usermod -aG $group $user 
+
+elif [ $choice -eq 6 ];
+then
+          echo "Please Enter USERNAME to check it is status"
+          read status
+          cat /etc/password | grep -i $status
+
+elif [ $choice -eq 7 ];
+then
+          echo "Please Enter GROUPNAME to check it is status"
+          read status
+          cat /etc/group | grep -i $group
+
+elif [ $choice -eq 8 ];
+then
+          break
+else
+          echo "${choice} is not a valid choice please re-enter a valid number."
+fi
+
+done
