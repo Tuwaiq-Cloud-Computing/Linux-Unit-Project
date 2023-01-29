@@ -8,6 +8,7 @@ this bash script read from text file line by line to get questions for the quiz,
 the user has to type the answer from avilable answer. if the answer = save answer point will be added to the score
 
 
-#Team Members:
-##Riyad Almalki
-##Ali Aljehani
+# Team Members:
+
+## Riyad Almalki
+## Ali Aljehani
