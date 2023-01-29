@@ -10,17 +10,19 @@
 - Use loops.
 
 
-## Example Project :  User Management System :
+## Project :  
+Quizing system using bash script:
 
-#### Overview : A Bash script that you can use to make your user management easier. 
+#### Overview : 
+A Bash script read the user inputs line by line to solve the questions, also included a points tracker to show th correct annwers. 
 
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
+#### As a user I should be able to do the following :
+-see the questions
+-answser the questions
+-know that my answer is incorrect
+-see the final score for the two questions
 
 
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+### Team: 
+Ali Aljehani
+Riyad Almalki
