@@ -13,7 +13,8 @@
 
 
 
-## Example Project :  User Management System :
+##  Project :  Riyadh Season 
+
 
 #### Overview : A Bash script that you can use to make your user management easier. 
 
