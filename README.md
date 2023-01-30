@@ -1,26 +1,27 @@
-# Linux-Unit-Project
+Haifa Alfarag & Abdulrahman Alamoudi
+
+We made a BMI bash script where we get the user Body Mass Index by their height,weight,age, and gender.
+
+NOTE!!! 
+
+You need to install the " bc " pacage in order for you to run the bash script without any issues!
+
+Below I have wrote the command for the distro
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
-
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
-
-
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
+Distribution	Command
+OS X	brew install bc
+Debian	apt-get install bc
+Ubuntu	apt-get install bc
+Alpine	apk add bc
+Arch Linux	pacman -S bc
+Kali Linux	apt-get install bc
+CentOS	yum install bc
+Fedora	dnf install bc
+Raspbian	apt-get install bc
 
 
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+Also, I have attached a screenshot of how you can get the output in whatever color you like.
+
+
+Thank you for your understanding :D
