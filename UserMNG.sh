@@ -43,13 +43,9 @@ ERR= $[echo $?]
                                     "Create Folder for $user")
                                     echo " created folder for $user and make him\her the owner of folder"
                                     mkdir $user; chown $user $user
-                                    $ERR
-                                    if [ $ERR == 0 ] 
-                                    then
-                                        echo "folder have created successfully"
-                                    else
-                                        echo "Something went wrong please try again later"
-                                    fi 
+                            
+                                    echo "File created successfully"
+                                    break
                                     ;;
                                     "Create Group for $user")
                                     echo "Create new group and add $user to the group"
