@@ -1,26 +1,26 @@
 # Linux-Unit-Project
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
+## Example Project :  Gift Suggestions System :
 
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+#### Overview : Gift Selection system will provide you with a selection of the best carefully selected options (gifts for ladies, gifts for men, and home gifts), the system implemented using badh script.
+ 
+
+#### As a client I want to be able to do the following:
+• Choose from the menu:
+• List The options.
+o Gift for lady o Gift for men
+o Home Gifts o Random
+• Order.
+• Wrap the gift.
+• Enter the information to confirm the order.
+
+###As a System I want to be able to do the following:
+• select a gift.
+• Select random gift.
+• List the gift.
+• Order a gift.
+• Confirm the order.
 
 
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
-
-
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+### Done by : Nujud Albabtain, Renad Alenzi, Afrah Aljudaee, Hana Alfifi.
