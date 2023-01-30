@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Enter First Number :"
+read number1
+echo "Enter Second Number :"
+read number2
+
+while true
+do
+
+  
+  echo "1. Addition"
+  echo "2. Subtraction"
+  echo "3. Multiplication"
+  echo "4. Division"
+  echo "5. Exit"
+  echo -n "Select operation number.. from [1-5]:"
+  read input
+
+  
+  if [[ "$input" -eq "1" ]]
+  then
+    ((result=number1+number2))
+  elif [[ "$input" -eq "2" ]]
+  then
+    ((result=number1-number2))
+  elif [[ "$input" -eq "3" ]]
+  then
+    ((result=$number1*$number2))
+  elif [[ "$input" -eq "4" ]]
+  then
+    ((result=$number1/$number2))
+  elif [[ "$input" -eq "5" ]]
+  then
+    exit 0
+  else
+    echo "Invalid input"
+  fi
+  echo "The result is $result"
+done
