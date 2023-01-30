@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ERR= $[echo $?]
-
   PS4='Please enter your choice: '
     options1=("Create New User" "Update User" "Quit")
         select opt1 in "${options1[@]}"
