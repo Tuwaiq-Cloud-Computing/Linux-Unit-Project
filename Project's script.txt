@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Get the name of the GitHub user.
+USER=$1
+
+# Get the name of the GitHub repository.
+REPO_NAME=$2
+
+# Clone the repository.
+git clone https://github.com/$USER/$REPO_NAME.git
+
+# Change to the directory of the repository.
+cd $REPO_NAME
+
+
+# Copy the `index.html` file to the Nginx server.
+cp index.html /var/www/html/index.html
+
+# Restart the nginx server.
+systemctl restart nginx
+
+# Check the status of the nginx server.
+if ! systemctl status nginx | grep -q "Active: active (running)" ; then
+          echo "Nginx server failed to restart."
+            exit 1
+fi
+
+# Success!
+echo "Web page updated successfully."
