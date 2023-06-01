@@ -8,6 +8,7 @@
 - List all existing accounts.
 
 <br/>
+
 #### As required bash script will do the following:
 - Must be interactive on CLI.
 - Use variables.
