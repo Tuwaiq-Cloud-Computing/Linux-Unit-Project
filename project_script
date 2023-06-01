@@ -1,0 +1,98 @@
+#!/bin/bash
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'  # No color
+
+ACCOUNTS_FILE="app_accounts.txt"
+
+echo
+echo -e "${MAGENTA}=========== Welcome to PassShield ===========${NC}"
+echo -e "${MAGENTA} To verify your identity give me our secret 😉${NC}"
+read -r -s secret
+
+if [[ "$secret" = "majeed" ]]; then
+    echo "Access granted. You are now in the Bash."
+else
+    echo -e "${RED}You are not allowed to access PassShield${NC}"
+    exit 1
+fi
+
+
+addAccount() {
+    echo "Enter the app name:"	
+    read -r app_name
+    echo "Enter the email for $app_name:"
+    read -r email
+    password=$(tr -dc '[:alnum:]' < /dev/urandom | fold -w 10 | head -n 1)
+
+    echo "$app_name | $email | $password" >> "$ACCOUNTS_FILE"
+    echo -e "${GREEN}Account added successfully find below its details:"
+    echo
+    echo -e "  App Name: $app_name"
+    echo -e "  E-Mail: $email"
+    echo -e "  Password: $password ${NC}"
+}
+
+deleteAccount() {
+    echo -e "Enter the app name to delete:"
+    read -r app_name
+
+    if grep -q "^$app_name" "$ACCOUNTS_FILE"; then
+        sed -i "/^$app_name/d" "$ACCOUNTS_FILE"
+        echo -e "Account for $app_name deleted successfully."
+    else
+        echo -e "${RED}No account found for $app_name. ${NC}"
+    fi
+}
+
+
+listAccounts() {
+    if [[ -s "$ACCOUNTS_FILE" ]]; then
+	echo
+	echo
+        echo -e "${CYAN}App Accounts:"
+        echo "-------------"
+        cat "$ACCOUNTS_FILE"
+	echo -e "${NC}"
+	echo
+else
+        echo -e "${RED}No app accounts found.${NC}"
+    fi
+}
+
+
+while true; do
+
+    echo
+    echo -e "${YELLOW}1. Add an app account"
+    echo -e "2. Delete an app account"
+    echo -e "3. List app accounts"
+    echo -e "4. Exit"
+    echo
+    read -p "Enter your choice (1-4): " choice
+    echo -e "${NC}"
+
+case $choice in
+        1)
+            addAccount
+            ;;
+        2)
+            deleteAccount
+            ;;
+        3)
+            listAccounts
+            ;;
+        4)
+            echo "Exiting..."
+            exit 0
+            ;;
+        *)
+            echo -e "${RED}Invalid choice. Please try again.${NC}"
+            ;;
+    esac
+done
