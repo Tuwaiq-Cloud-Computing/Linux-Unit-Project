@@ -3,7 +3,7 @@
 ## Overview
 #### A Bash script that you can use to Encrypt and Decrypt the files using The Advanced Encryption Standard(AES)-256 Algorithm which is a symmetric encryption algorithm that requires a key to encrypt and decrypt . 
 
-## Example 
+## User Stories 
 #### Basic Encryption and Decryption:
 - As a user, I want to encrypt files containing sensitive information to protect them from unauthorized access.
 - As a user, I want to decrypt files that have been previously encrypted, so I can access their contents when needed.
