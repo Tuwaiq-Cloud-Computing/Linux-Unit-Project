@@ -15,8 +15,13 @@ that the user entered, and push the changes to the remote repository.
 
 ### A User stories:
 As a user, I want to be able to initialize a git repository in the current directory.
+
 As a user, I want to be able to add a file to the git repository.
+
 As a user, I want to be able to commit the changes to the git repository.
+
 As a user, I want to be able to set the main branch of the git repository.
+
 As a user, I want to be able to add a remote repository to the git repository.
+
 As a user, I want to be able to push the changes to the remote repository.
