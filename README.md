@@ -1,4 +1,4 @@
-# Atheer Alshehri & Basmah Bahubay
+# Atheer Alshehri & Basmah Bahubayl
 ##### Project Name :Riyadh Restaurants
 
 ##### Riyadh Restaurants :A program in which the user chooses the cuisine he wants, then a list of restaurants is shown to him based on the cuisine he chose, and he can see this list with or without ratings, according to his desire.
