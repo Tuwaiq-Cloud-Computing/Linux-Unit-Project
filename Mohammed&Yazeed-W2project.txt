@@ -1,0 +1,43 @@
+بروجكت الاسبوع الثاني ، عبارة عن سحبت البيانات من الاكسل وتنفيذها كـ اوامر ومن بعد ذلك يتم تنفيذه كل دقيقه 
+
+-------------------------------------------- ملف الاكسل قبل التعديل --------------------------------------
+
+username,role,expiration,password
+user1,TEST,2025-01-01,23142
+user2,TEST,2023-01-01,43322
+
+------------------------------------------- نستعرض اليوزرات في التيرمنال ----------------------------
+
+user1:x:1017:1017::/home/user1:/bin/bash
+user2:x:1018:1018::/home/user2:/bin/bash
+
+كما نلاحظ انه تم الانشاء 
+
+------------------------------------------- السكريبت ----------------------------------------------------
+#!/bin/bash
+
+# Open the users.csv file
+while IFS=, read -r username role expiration password; do
+
+    # Create the user
+    sudo useradd -m -U -d /home/"$username" -s /bin/bash "$username"
+
+    # Set the user's role
+    sudo usermod -aG "$role" "$username"
+
+    # Set the user's password
+    echo "$username:$password" | sudo chpasswd
+
+    # Check if the user's expiration date has passed
+    if [ -n "$expiration" ]; then
+        date_now=$(date +%Y-%m-%d)
+        if [[ "$date_now" > "$expiration" ]]; then
+            sudo userdel "$username"
+        fi
+    fi
+
+done < /home/kali/Desktop/usertest.csv
+
+------------------------------------------- كورن تاب لتشغيل الباش كل دقيقه ------------------------
+
+* * * * * sh /home/kali/Desktop/usertest.sh
