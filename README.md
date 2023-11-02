@@ -7,7 +7,7 @@ We created an airline booking system with specific destinations:
 - Rome
 - Istanbul
 - Seoul
-- 
+  
 In order to book, the user must enter a valid number of flights (from 1 to 4), enter the departure date in a specific format (YYYY-MM-DD), choose a class (First, Business, Economy), and enter the passenger names.
 
 If the previous steps were successful, the user will be asked to input the credit card information with the following specifications:
