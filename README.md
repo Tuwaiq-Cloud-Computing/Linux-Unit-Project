@@ -118,7 +118,7 @@ do
 
                                   if [[ ! "$TAKEOFF_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
                                   then
-                                                  "Invalid takeoff date. Please enter the takeoff  date in the format YYYY-MM-DD."
+                                                  echo "Invalid takeoff date. Please enter the takeoff  date in the format YYYY-MM-DD."
                                                   read -p "Takeoff date (format: YYYY-MM-DD): " TAKEOFF_DATE
                                    fi
 
