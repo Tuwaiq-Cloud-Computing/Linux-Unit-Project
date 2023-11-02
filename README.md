@@ -12,12 +12,12 @@ In order to book, the user must enter a valid number of flights (from 1 to 4), e
 
 If the previous steps were successful, the user will be asked to input the credit card information with the following specifications:
 - Card number must be 16 digits only
-- Epiration date must be in a specific format (MM/YY)
+- Expiration date must be in a specific format (MM/YY)
 - CVV must be only 3 digits only
 
 Based on the flight chosen, inputed details get appended to a specific txt file based on the selected destination.
 Limitations:
-- Each flight contains only five passengers; if the flight is full, it would not be shown in the list
+- Each flight contains only five passengers; if the flight is full, it will not be shown in the list
 -  If the user inputs a number of passengers that would increase the limit, it will reject it and ask the user to enter a different number
 -  - Example: if flight Paris contains 3 passengers and the user chooses to add 4 passengers, it will show an error message and ask the user to re-enter the total passenger numbers again
 
@@ -25,22 +25,22 @@ Limitations:
 1. The user chooses the destination by inputting the number
 <img width="505" alt="Screenshot 2023-11-02 at 6 29 00 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/56a0e284-ad90-45db-8c66-e1d4f71764c3">
 
-2. After choosing the flight the user gets asked to input number of passengers, takeoff date, class, and passanger name
+2. After choosing the flight the user gets asked to input the number of passengers, takeoff date, class, and passenger name
 <img width="374" alt="Screenshot 2023-11-02 at 6 56 09 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/872822d7-f598-4c1e-8d43-0f8e89157d75">
 
-3. Later on, user enters the card details to complete the purchase
+3. Later on, the user enters the card details to complete the purchase
 <img width="339" alt="Screenshot 2023-11-02 at 7 00 41 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/700096a7-e343-4ea0-871a-3474a386c856">
 
-4. After the card details has been entered succefly a message would appear
+4. After the card details have been entered successfully a message will appear
 <img width="390" alt="Screenshot 2023-11-02 at 7 10 38 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/df6ab1da-4f7d-48cc-a639-689d7cbcecf3">
 
 * Showing the list when one of the flights is full
-  <img width="510" alt="Screenshot 2023-11-02 at 7 24 16 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/aaa5af3d-3a43-4051-afb6-7a192e2773d5">
+<img width="510" alt="Screenshot 2023-11-02 at 7 24 16 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/aaa5af3d-3a43-4051-afb6-7a192e2773d5">
 
-*Showing error meesage when exceeding the maximum number of passengers
+* Showing error message when exceeding the maximum number of passengers
 <img width="500" alt="image" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/95ffd9ce-07ce-4042-b48f-261ce16b7c9c">
 
-*Showing error message when the credit card infrormation entered in a wrong format
+* Showing error message when the credit card information is entered in the wrong format
 <img width="664" alt="image" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/1f7900df-e0c0-4faa-a941-feed69e181ac">
 
 
