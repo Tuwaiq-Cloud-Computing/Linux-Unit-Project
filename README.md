@@ -1,7 +1,7 @@
 # RASA Airlines
 project by: Sarah Aldrees & Raghad Alshammari
 
-### Overview:
+## Overview:
 We created an airline booking system with specific destinations:
 - Paris
 - Rome
@@ -21,7 +21,7 @@ Limitations:
 -  If the user inputs a number of passengers that would increase the limit, it will reject it and ask the user to enter a different number
 -  - Example: if flight Paris contains 3 passengers and the user chooses to add 4 passengers, it will show an error message and ask the user to re-enter the total passenger numbers again
 
-### User Stories:
+## User Stories:
 1. The user chooses the destination by inputting the number
 <img width="505" alt="Screenshot 2023-11-02 at 6 29 00 PM" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/56a0e284-ad90-45db-8c66-e1d4f71764c3">
 
@@ -44,7 +44,7 @@ Limitations:
 <img width="664" alt="image" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/1f7900df-e0c0-4faa-a941-feed69e181ac">
 
 
-### Bash script file:
+## Bash script file:
 #!/bin/bash
 
 is_flight_full()
@@ -181,7 +181,9 @@ fi
 
 echo -e "\nSucceful puchase!! Your flight has been booked.\nTravel safely!"
 
-### Text files
+
+
+## Text files
 <img width="1509" alt="image" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/11cedc82-0990-4f48-bfb5-78e8affd1858">
 
 <img width="1512" alt="image" src="https://github.com/SarahAldrees1/Linux-Unit-Project/assets/100089507/6fd3c58b-42cb-4097-91d8-802807732a96">
