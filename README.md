@@ -1,4 +1,4 @@
-# Linux-Unit-Project
+# Tic Tac toe Game Project
 
 
 ## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
