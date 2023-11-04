@@ -1,26 +1,18 @@
-# Linux-Unit-Project
+The project is Hospital system.
 
+This script is designed to handle the user login and registration process for the Health Hospital system. It allows users to either log in using their existing account or register a new account if they do not have one and the patient will be able to use the hospital services whether the user wants to book or cancel the appointment.
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
+## Usage
 
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+To use this script, follow the instructions below:
 
+1. Run the script using ‘bash script.sh ‘
+2. welcome message and asked if you have an account.
+3. If you have an account, enter "yes" or "no" to proceed with login or registration, respectively.
+4. If you choose to login, enter your User ID and password when prompted.
+5. If the entered User ID and password match with patient_information file, you will be able to book or cancel an appointment by choosing the respective option (1 for booking, 2 for cancellation).
+6. If you choose to register, enter your desired User ID, password, confirm the password, email, and phone number when prompted.
+7. Once registration is complete, you will be redirected to the login process, where you can enter your User ID and password to access the hospital's services.
+8. After successful login, you can again choose to book or cancel an appointment by selecting the respective option (1 for booking, 2 for cancellation).
 
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
-
-
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+The script assumes the presence of a file named `patient_information.txt` in the same directory to store user information. This file is used for both login and registration processes.
