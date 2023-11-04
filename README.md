@@ -49,7 +49,7 @@ current_weather()
 ## Usage/Examples
 
 ```javascript
-import Component from 'weather.sh'
+./'weather.sh'
 
 #!/bin/bash
 Username=$(whoami)
