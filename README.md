@@ -17,17 +17,18 @@ will be saved in a file (Records).
 5- When the game ends, a record file with each player will be added by their names, it will have the record whether win, lose, or draw, and the date of the game. 
 
 
-## Example Project :  User Management System :
+## Tools used in the Project:
 
-#### Overview : A Bash script that you can use to make your user management easier. 
+1- Bash Scripting Language: The script is written in Bash.
 
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
+2- Linux System Commands.
+
+3- Conditional Statements: If statements are used for checking conditions and making decisions in the script.
+
+4- Functions: Defined in the script to encapsulate specific tasks or actions.
+
+5- Arrays: An array is used to represent the Tic-Tac-Toe game board. The array elements are updated with 'X' and 'O' to reflect the game state.
+
+6- Loops: A while loop is used to implement the game loop, allowing players to take turns, make moves, and check for the game's outcome until the game is no longer in progress.
 
 
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
