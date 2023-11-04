@@ -1,26 +1,46 @@
-# Linux-Unit-Project
+# Bash-Weather
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
 
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+## About
+- weather.sh gets the current weather from OpenWeather and displays the results to the terminal
 
-
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
+  
+## Prerequisites
+- OpenWeatherMap API key (http://openweathermap.org/appid).
+- Bash shell
+- curl command-line tool for getting data using HTTP protocol. curl can be found in the curl package on major Linux distributions.
+- jq command-line tool for parsing JSON data. jq can be found in the jq package on major Linux distributions.
 
 
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+## How to use
+Run weather.sh 
+```
+./weather2.sh
+```
+Add your OpenWeatherMap API key to the end of the openweathermap.key file,
+
+```
+# Add your OpenWeatherMap API key below (http://openweathermap.org/appid)
+```
+## Command-line options
+`-s` The -s option can be used to specify arguments:
+
+
+`-jq` a lightweight and flexible command-line JSON processor
+
+
+`-r` True if file exists and is readable.
+
+ 
+##### Example
+Get the current weather in Riyadh:
+```
+./weather2.sh Riyadh
+```
+### Keyboard functions
+current_weather()
+
+### Screenshoot
+
+![image](https://github.com/Aishah2030/Linux-Unit-Project/assets/90576780/aca956ca-905b-4747-9a71-da4e2b4efb05)
