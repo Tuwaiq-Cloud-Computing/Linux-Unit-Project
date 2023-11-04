@@ -44,3 +44,44 @@ current_weather()
 ### Screenshoot
 
 ![image](https://github.com/Aishah2030/Linux-Unit-Project/assets/90576780/aca956ca-905b-4747-9a71-da4e2b4efb05)
+
+
+## Usage/Examples
+
+```javascript
+import Component from 'weather.sh'
+
+#!/bin/bash
+Username=$(whoami)
+date=$(date "+%D")
+
+        # Function to print the current weather.
+current_weather() {
+
+echo "Welcome Back $Username"
+echo " Enter the City to check the weather:"
+   read city # city name passed as argument
+
+   # Make a GET request to the weather API and retrieve the response
+    local response=$(curl -s "http://api.openweathermap.org/data/2.5/weather?q=$city&appid=b07c392fc634b3b3241ddfe75315c74a&units=metric")
+# Check if the request was successful
+
+    if [ $? -eq 0 ]; then
+# Extract the relevant weather information from the response
+        local temperature=$(echo "$response" | jq -r '.main.temp')
+       local description=$(echo "$response" | jq -r '.weather[0].description')
+
+
+# Print the weather information
+        echo "Weather In $city For Today $date Is:"
+        echo "Temperature: $temperature °C"
+     echo "Description: $description"
+else
+        echo "Failed to retrieve weather information."
+    fi
+ }
+
+current_weather | tee city_log.txt
+
+}
+```
