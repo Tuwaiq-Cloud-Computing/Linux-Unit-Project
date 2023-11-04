@@ -1,0 +1,96 @@
+#!/bin/bash
+
+# Define the menu options
+options=("Create file for flight number and numbers of passengers" "Insert New passenger" "Display all passenger is spasfic flight"
+ "Display all flight " "Delete Flight" "Exit")
+
+# Initialize the menu selection variable
+menu_selection=0
+
+# Display the menu and prompt the user for their selection
+while [ $menu_selection -ne 6 ]; do
+echo " "
+echo " The Check in flight system "
+echo "============================= "
+echo "           Menu:"
+for i in ${!options[@]}; do
+echo "$[i+1]. ${options[$i]}"
+done
+echo -n "Select an option: "
+read menu_selection
+# Validate the user's selection
+if [ $menu_selection -lt 1 ] || [ $menu_selection -gt 6 ]; then
+echo "Invalid selection. Please try again."
+else
+# Perform the selected action
+case $menu_selection in
+1)
+# Create file for flight number and numbers of passengers
+echo "Enter the flight number: "
+read flight_number
+echo "Enter the number of passengers: "
+read number_of_passengers
+# Create the file
+touch "$flight_number.txt"
+echo "$number_of_passengers" > "$flight_number.txt"
+;;
+2)
+#Insert New passenger
+echo "Enter the flight number: "
+read flight_number
+if [ -f "$flight_number.txt" ]; then
+echo "Enter the passenger name: "
+read passenger_name
+#Append the passenger name to the file
+echo "$passenger_name" >> "$flight_number.txt"
+else
+echo "File does not exist."
+fi
+;;
+3)
+# Display all passenger is spasfic flight
+echo "Enter the flight number: "
+echo " "
+echo "The flight number is "
+read flight_number
+if [ -f "$flight_number.txt" ]; then
+echo "The namber and name of passengers are : "
+cat "$flight_number.txt"
+else
+echo "File does not exist."
+fi
+;;
+# Read the file and display all passenger names
+4)
+# Display all flights in your system
+# Add code to list all flight files in the current directory
+echo "Flights in your system:"
+for file in *.txt; do
+if [ -f "$file" ]; then
+flight_number=$(basename "$file" .txt)
+echo "$flight_number"
+fi
+done
+;;
+5)
+# Delete the flight
+echo "Enter the name of the flight number to delete: "
+read flight_number
+if [ -f "$flight_number.txt" ]; then
+rm "$flight_number.txt"
+echo "Flight deleted successfully."
+else 
+echo "File does not exist."
+fi
+;;
+6)
+#Exit
+echo " "
+echo " Thank you for using our Flight System "
+echo " "
+echo "Have a nice flight"
+exit 0
+;;
+esac
+fi
+done
