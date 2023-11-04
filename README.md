@@ -42,15 +42,13 @@ Get the current weather in Riyadh:
 current_weather()
 
 ### Screenshoot
-
-![image](https://github.com/Aishah2030/Linux-Unit-Project/assets/90576780/aca956ca-905b-4747-9a71-da4e2b4efb05)
+![Weather](https://github.com/Aishah2030/Linux-Unit-Project/assets/90576780/039da1d9-ae5a-478d-8251-4b2c6f9ca973)
 
 
 ## Usage/Examples
 
 ```javascript
 ./'weather.sh'
-
 #!/bin/bash
 Username=$(whoami)
 date=$(date "+%D")
@@ -58,15 +56,16 @@ date=$(date "+%D")
         # Function to print the current weather.
 current_weather() {
 
-echo "Welcome Back $Username"
-echo " Enter the City to check the weather:"
+            echo "Welcome $Username"
+            echo " Enter City Name to Check the Weather:"
    read city # city name passed as argument
 
    # Make a GET request to the weather API and retrieve the response
-    local response=$(curl -s "http://api.openweathermap.org/data/2.5/weather?q=$city&appid=b07c392fc634b3b3241ddfe75315c74a&units=metric")
-# Check if the request was successful
+    local response=$(curl -s "http://api.openweathermap.org/data/2.5/weather?q=$city&appid=b07c392fc634b3b3241ddfe75315c74a&unit$
 
+# Check if the request was successful
     if [ $? -eq 0 ]; then
+
 # Extract the relevant weather information from the response
         local temperature=$(echo "$response" | jq -r '.main.temp')
        local description=$(echo "$response" | jq -r '.weather[0].description')
@@ -75,13 +74,24 @@ echo " Enter the City to check the weather:"
 # Print the weather information
         echo "Weather In $city For Today $date Is:"
         echo "Temperature: $temperature °C"
-     echo "Description: $description"
-else
-        echo "Failed to retrieve weather information."
+        echo "Description: $description"
+ else
+      echo "Failed to retrieve weather information."
     fi
  }
 
-current_weather | tee city_log.txt
+      current_weather | tee city_log.txt
+    sleep 2
 
-}
+        echo "Want to see other City? Yes/No "
+read answer
+            if [ $answer == "yes" ];
+then
+            current_weather
+
+elif        [ $answer == "no" ];
+then
+        echo "Have a nice day! See u next time"
+fi
+
 ```
