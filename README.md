@@ -1,7 +1,9 @@
-# Tic Tac toe Game Project
+# Tic-Tac-toe Game Project
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
+## Description :
+Tic Tac Toe game using CLI, an interactive game using two players both can insert their names to be saved into the system files, each game whether its a win, lose, or draw,
+will be saved in a file (Records).
 
 ### Bash script will do the following:
 - Must be interactive on CLI.
