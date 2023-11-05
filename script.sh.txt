@@ -1,0 +1,65 @@
+#!/bin/bash
+
+Instance_Type="ecs.g6.large"
+Internet_MaxBandwidthOut=1
+Region_Id=<RegionId>
+Instance_ChargeType="PostPaid"
+Image_Id=<Used_imgId>
+Security_GroupId="Your_securitygroupId"
+VSwitch_Id=<Your SwitchId>
+SystemDisk_Size=20
+
+
+read -p "Enter Instance count: " instance_count
+read -p "Enter Password : " Pass_word
+
+for ((i=1; i<=$instance_count; i++)); do
+    Instance_Name="Instance-$i"
+
+        if [[ $Instance_Type == "ecs.g6.large" ]]; then
+        system_disk_category="cloud_essd"
+    else
+        system_disk_category="cloud_efficiency"
+    fi
+
+
+    Create_Command= aliyun ecs RunInstances --InstanceType $Instance_Type  --InstanceName $Instance_Name  --InternetMaxBandwidthOut $Internet_MaxBandwidthOut --RegionId $Region_Id --InstanceChargeType $Instance_ChargeType --ImageId $Image_Id --SecurityGroupId $Security_GroupId --VSwitchId $VSwitch_Id --Password $Pass_word --SystemDisk.Size= $SystemDisk_Size --SystemDisk.Category $system_disk_category
+
+ echo "Creating instance: $Instance_Name"
+    $Create_Command
+
+    echo "Instance creation completed."
+    echo
+
+         display_instances() {
+
+        read -p "Enter the instance ID: " instance_id
+
+
+export ALIBABA_CLOUD_PROFILE= <Alibaba cloud cli folder name> <your acess key> <your acess key secret> 
+instance_details=$(aliyun ecs DescribeInstances)
+
+
+if [[ $(echo "$instance_details" | jq -r '.TotalCount') -eq 0 ]]; then
+  echo "Instance not found."
+else
+
+  instance_name=$(echo "$instance_details" | jq -r '.Instances.Instance[0].InstanceName')
+  instance_status=$(echo "$instance_details" | jq -r '.Instances.Instance[0].Status')
+  instance_public_ip=$(echo "$instance_details" | jq -r '.Instances.Instance[0].PublicIpAddress.IpAddress[0]')
+
+  echo "Instance ID: $instance_id"
+  echo "Instance Name: $instance_name"
+  echo "Status: $instance_status"
+  echo "Public IP: $instance_public_ip"
+fi
+
+         }
+read -p "Do you want to display existing instances details? (y/n): " user_input
+
+        if [[ $user_input == "y" ]]; then
+         display_instances
+        else
+        echo "Instances display skipped."
+        fi
+
