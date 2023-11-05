@@ -1,26 +1,17 @@
-# Linux-Unit-Project
+# Automated Docker Containers
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
-
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+# Overview:
+The Docker Container Setup project aims to provide an automated script for setting up Docker containers based on user preferences. The script allows users to choose an operating system (Ubuntu, openSUSE, CentOS, or a custom image) and optionally install software within the container. The script handles the installation and configuration of Docker, pulls the specified Docker image, and customizes the container based on the user's choices.
 
 
-## Example Project :  User Management System :
+# User Stories:
+- As a developer, I want to easily set up Docker containers with different operating systems to test my applications in various environments.
 
-#### Overview : A Bash script that you can use to make your user management easier. 
+- As a system administrator, I want a streamlined process for deploying Docker containers with specific software configurations to ensure consistent setups across multiple instances.
 
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
+- As a researcher, I want the flexibility to use custom Docker images in my experiments and easily install additional software within the containers.
 
+- As a DevOps engineer, I want to automate the setup of Docker containers, including the installation of necessary software, to improve efficiency and reduce manual configuration steps.
 
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
+- As a beginner in Docker, I want a user-friendly script that guides me through the process of creating and customizing Docker containers without requiring extensive knowledge of Docker commands.
