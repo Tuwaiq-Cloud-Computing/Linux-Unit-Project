@@ -16,7 +16,7 @@ The Docker Container Setup project aims to provide an automated script for setti
 
 - As a beginner in Docker, I want a user-friendly script that guides me through the process of creating and customizing Docker containers without requiring extensive knowledge of Docker commands.
 
-- Team Member:
+# Team Member:
 Faris AlJohani
 Muhannad Alzahrani
 Abdulaziz Jarman
