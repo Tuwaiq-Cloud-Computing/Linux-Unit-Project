@@ -1,0 +1,144 @@
+#!/bin/bash
+
+flag="0"
+balence=0
+idIsFound="0"
+INFILE=/Bank_system/users_bank.csv
+newAccount () {
+
+echo "Enter your name "
+        read name
+        echo "Enter your ID "
+        read _id
+        echo "Enter your password "
+        read password
+
+        echo "$_id:$name:$password:$balence" >> /Bank_system/users_bank.csv
+}
+printf "\nwelcome to Tuwaiq Bank\n"
+
+echo "Do you have an account yes or no "
+read have_Acc
+
+if [ "$have_Acc" == "yes" ]
+then
+
+echo " Enter your ID"
+read _id
+echo "Enter your password"
+read password
+
+
+IFS=$'\n' # set the Internal Field Separator to newline
+for LINE in $(cat "$INFILE")
+do
+
+        id=`echo "$LINE" | cut -d: -f1`
+
+        pass=`echo "$LINE" | cut -d: -f3`
+
+if [ "$_id" == "$id"  ]
+then
+        idIsFound="1"
+
+if [ "$password" == "$pass" ]
+        then
+
+        balence=`echo "$LINE" | cut -d":" -f4`
+
+
+while [ $flag -eq "0" ];
+do
+echo "1- Current amount "
+echo "2- Deposit"
+3- Withdraw
+   #awk `/_id/ { print $4 =$sum }` $LINE
+         balence=`expr $balence + $Deposit_amount`
+
+elif [ $choice == "3" ]
+then
+      echo "How much do you want to Withdraw?"
+        read Withdraw_amount
+        if [ "$balence" -gt "$Withdraw_amount" ]
+        then
+         echo "Done successful"
+          Withdraw=`expr $balence - $Withdraw_amount`
+        sed -i "s/$balence/$Withdraw/" $INFILE
+#       awk `/_id/ { print $4 =$Withdraw }` $LINE
+        balence=$Withdraw
+elif [ $balence -lt $Withdraw_amount ]
+then
+        echo "Your balence is less than  $Withdraw_amount"
+
+fi
+              elif [ $choice == "4" ]
+then
+
+        flag=1
+        echo " see you later"
+
+fi
+
+done
+else
+
+        echo "invalide id or password "
+echo " Enter your ID"
+read _id
+echo "Enter your password"
+read password
+fi
+else
+continue
+fi
+if [ idIsFound == "1" ]
+then
+echo " Your ID not found please creat new account"
+newAccount
+fi
+
+"bank.sh" 123L, 2127C                                                   92,7-14       88%
+   #awk `/_id/ { print $4 =$sum }` $LINE
+         balence=`expr $balence + $Deposit_amount`
+
+elif [ $choice == "3" ]
+then
+      echo "How much do you want to Withdraw?"
+        read Withdraw_amount
+        if [ "$balence" -gt "$Withdraw_amount" ]
+        then
+         echo "Done successful"
+          Withdraw=`expr $balence - $Withdraw_amount`
+        sed -i "s/$balence/$Withdraw/" $INFILE
+#       awk `/_id/ { print $4 =$Withdraw }` $LINE
+        balence=$Withdraw
+elif [ $balence -lt $Withdraw_amount ]
+then
+        echo "Your balence is less than  $Withdraw_amount"
+
+fi
+              elif [ $choice == "4" ]
+then
+
+        flag=1
+        echo " see you later"
+
+fi
+
+done
+else
+
+        echo "invalide id or password "
+echo " Enter your ID"
+read _id
+echo "Enter your password"
+read password
+fi
+else
+continue
+fi
+if [ idIsFound == "1" ]
+then
+echo " Your ID not found please creat new account"
+newAccount
+fi
