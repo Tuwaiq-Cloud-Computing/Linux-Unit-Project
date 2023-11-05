@@ -1,26 +1,20 @@
 # Linux-Unit-Project
+# AQAR PROGECT
+<img width="719" alt="Aqar" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/bab279b3-ee27-4096-84bf-0c1bccceb6fe">
 
 
-## Based on what you’ve learned until now , create a Bash script solve a problem of your choosing (impress us with your skills). This project must at least satisfy the following minimum requirements :
+## Overview
+<img width="721" alt="OverView" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/803d245d-1e85-43da-97e7-4afdfc3188c6">
 
-### Bash script will do the following:
-- Must be interactive on CLI.
-- Use variables.
-- Use conditions
-- Use loops.
+##Script Features 
+1.	search for a land
+<img width="719" alt="Search " src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/4f53a3e9-5adf-4caa-878b-fb2fcefb198b">
+2.	add land
+ <img width="719" alt="Add Land" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/ee3434b8-bb51-49a0-89eb-7942909add20">
+3.	change the status of a land to sold
+<img width="719" alt="change" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/b173b0b1-5858-4fb7-8e98-2b95b632d446">
+4.	get seller info
 
+<img width="719" alt="seller info" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/56e9e627-ecc7-45b6-bcbd-64ac198b9c4c">
+5. exit
 
-## Example Project :  User Management System :
-
-#### Overview : A Bash script that you can use to make your user management easier. 
-
-#### As a system administrator I should be able to do the following :
-- Create a user.
-- Update user info
-- Delete a user.
-- Create a group.
-- Add user to group.
-- and so on...
-
-
-#### For your project. Edit this README.md file to include your own project name, overview, user stories.
