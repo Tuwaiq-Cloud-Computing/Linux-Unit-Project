@@ -6,7 +6,7 @@
 ## Overview
 <img width="721" alt="OverView" src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/803d245d-1e85-43da-97e7-4afdfc3188c6">
 
-##Script Features 
+## Script Features 
 1.	search for a land
 <img width="719" alt="Search " src="https://github.com/shaikhhaA/IGNITE-GYM-/assets/122119477/4f53a3e9-5adf-4caa-878b-fb2fcefb198b">
 2.	add land
